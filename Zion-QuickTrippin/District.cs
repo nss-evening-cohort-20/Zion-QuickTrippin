@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Zion_QuickTrippin
 {
-    internal class Class1
+    public class District
     {
+
     }
 }
