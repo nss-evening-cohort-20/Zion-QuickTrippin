@@ -1,10 +1,5 @@
-﻿namespace Zion_QuickTrippin
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
-}
+﻿
+using Zion_QuickTrippin;
+
+    MainInterface menu = new MainInterface();
+    menu.Show();
