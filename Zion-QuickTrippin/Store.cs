@@ -12,6 +12,4 @@ public class Store
         string enteredNumber = Console.ReadLine();
 
     }
-
-
 }

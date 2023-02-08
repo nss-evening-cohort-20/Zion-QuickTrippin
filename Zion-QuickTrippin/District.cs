@@ -8,6 +8,7 @@ namespace Zion_QuickTrippin
 {
     public class District
     {
+
         //Properties
         public string DistrictName { get; set; }
         public string DistrictManager { get; set; }
