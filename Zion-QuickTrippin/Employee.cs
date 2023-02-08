@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Zion_QuickTrippin;
 
-namespace Zion_QuickTrippin
+public class Employee
 {
-    internal class Employee
+    public string FirstName { get; set; }  
+    public string LastName { get; set; }
+    public string JobTitle { get; set; }
+
+    public Employee(string firstName, string lastName, string jobTitle)
     {
+        FirstName = firstName;
+        LastName = lastName;
+        JobTitle = jobTitle;
     }
+
+    public string EmployeeName => $"{FirstName} {LastName}";
+
+
+
+    
 }

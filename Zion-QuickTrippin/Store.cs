@@ -6,10 +6,27 @@ public class Store
     public int DistrictNumber { get; set; }
     public int GasSales { get; set; }
 
-    public List<Store> CreateStore(string StoreNumber, int DistrictNumber, int GasSales)
+    //string StoreNumber, int DistrictNumber, int GasSales
+    public Store CreateStore()
     {
+        Store store = new Store();
+
         Console.WriteLine("Please provide new store number");
         string enteredNumber = Console.ReadLine();
+        store.StoreNumber = enteredNumber;
+
+        Console.WriteLine("Please choose a district");
+        //this is where the district list would show up (loop WriteLine of the district name property
+
+        string enteredDistrict = Console.ReadLine();
+
+        store.DistrictNumber = enteredDistrict;
+
+        store.GasSales = 0;
+
+        //add store to list in repository class 
+
+        return (store);
 
     }
 }
