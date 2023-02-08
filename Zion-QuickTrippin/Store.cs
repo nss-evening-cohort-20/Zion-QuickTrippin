@@ -3,7 +3,7 @@
 public class Store
 {
     public string StoreNumber { get; set; }
-    public int DistrictNumber { get; set; }
+    public string DistrictName { get; set; }
     public int GasSales { get; set; }
 
     //string StoreNumber, int DistrictNumber, int GasSales
@@ -20,13 +20,12 @@ public class Store
 
         string enteredDistrict = Console.ReadLine();
 
-        store.DistrictNumber = enteredDistrict;
+        store.DistrictName = enteredDistrict;
 
         store.GasSales = 0;
 
         //add store to list in repository class 
-
-        return (store);
+        return(store);
 
     }
 }

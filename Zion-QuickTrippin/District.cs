@@ -15,11 +15,21 @@ namespace Zion_QuickTrippin
         public List<int> StoreNumbers { get; set; }
 
         //Constructor
-        District(string enteredDistrictName, string enteredDistrictManager, List<int> enteredStoreNumbers)
+        public District CreateDistrict ()
         {
-            DistrictName = enteredDistrictName;
-            DistrictManager = enteredDistrictManager;
-            StoreNumbers = enteredStoreNumbers;
+            District district = new District ();
+            Console.WriteLine("What is the name of the new district?");
+            string enteredName = Console.ReadLine();
+            district.DistrictName = enteredName;
+
+            Console.WriteLine("Who is the district manager?");
+            
+            string districtManager = Console.ReadLine();
+            district.DistrictManager = districtManager;
+
+            district.StoreNumbers= new List<int> ();
+
+            return(district);
         }
 
 

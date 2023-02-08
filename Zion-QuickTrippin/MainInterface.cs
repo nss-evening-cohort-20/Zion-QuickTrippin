@@ -2,7 +2,13 @@
 
 public class MainInterface
 {
-
+    public MainInterface() 
+    {
+        _createStore = new Store();
+        _createEmployee = new Employee();
+    }
+    public Store _createStore;
+    public Employee _createEmployee;
     public bool Running = true;
     public void Show()
     { 
@@ -31,10 +37,10 @@ public class MainInterface
                 Console.WriteLine("Adding district");
             } else if (numericInput == 2) 
             {
-                Console.WriteLine("Adding district");
+                _createStore.CreateStore();
             } else if (numericInput == 3) 
             {
-                Console.WriteLine("Adding district");
+                _createEmployee.CreateEmployee();
             } else if (numericInput == 4) 
             {
                 Console.WriteLine("Adding district");
