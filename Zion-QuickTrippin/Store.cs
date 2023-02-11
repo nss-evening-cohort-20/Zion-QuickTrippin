@@ -4,7 +4,7 @@ public class Store
 {
     public int StoreNumber { get; set; }
     public string DistrictName { get; set; }
-    public int GasSales { get; set; }
+    public double GasSales { get; set; }
 
     //string StoreNumber, int DistrictNumber, int GasSales
     public Store CreateStore()

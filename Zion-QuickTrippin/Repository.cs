@@ -8,6 +8,11 @@
         public static List<District> _districts = new List<District>();
         public static List<Store> _stores = new List<Store>();
         public static List<Employee> _employees = new List<Employee>();
+
+        public List<District> RepoDistricts { get { return _districts; } set { _districts = value; } }
+        public List<Store> RepoStores { get { return _stores; } set { _stores = value; } }
+        public List<Employee> RepoEmployees { get { return _employees; } set { _employees = value; } }
+
         public void LoadSampleData()
         {
             District sampleOne = new District
@@ -28,7 +33,7 @@
             {
                 StoreNumber = 420,
                 DistrictName = "NorthWest",
-                GasSales = 10000
+                GasSales = 10000.00
             };
             _stores.Add(storeOne);
 
@@ -36,7 +41,7 @@
             {
                 StoreNumber = 169,
                 DistrictName = "NorthWest",
-                GasSales = 4000
+                GasSales = 4000.00
             };
             _stores.Add(storeTwo);
 
@@ -44,7 +49,7 @@
             {
                 StoreNumber = 063,
                 DistrictName = "SouthEast",
-                GasSales = 9000
+                GasSales = 9000.00
             };
             _stores.Add(storeThree);
 
@@ -52,7 +57,7 @@
             {
                 StoreNumber = 120,
                 DistrictName = "SouthEast",
-                GasSales = 8666
+                GasSales = 8666.00
             };
             _stores.Add(storeFour);
 
@@ -108,6 +113,21 @@
         public List<Employee> GetEmployees()
         {
             return _employees;
+        }
+
+        public void AddDistrict(District newDistrict)
+        {
+            RepoDistricts.Add(newDistrict);
+        }
+
+        public void AddStores(Store newStore)
+        {
+            RepoStores.Add(newStore);
+        }
+
+        public void AddEmployees(Employee newEmployee)
+        {
+            RepoEmployees.Add(newEmployee);
         }
     }
 }

@@ -6,6 +6,7 @@ public class Employee
     public string LastName { get; set; }
     public string JobTitle { get; set; }
     public int StoreNumber { get; set; }
+    public Store Store { get; set; }
     public double RetailSales { get; set; }
     public string FullName => $"{FirstName} {LastName}";
     //public Employee(string firstName, string lastName, string jobTitle)
