@@ -2,7 +2,7 @@
 
 public class Store
 {
-    public string StoreNumber { get; set; }
+    public int StoreNumber { get; set; }
     public string DistrictName { get; set; }
     public int GasSales { get; set; }
 
@@ -12,8 +12,8 @@ public class Store
         Store store = new Store();
 
         Console.WriteLine("Please provide new store number");
-        string enteredNumber = Console.ReadLine();
-        store.StoreNumber = enteredNumber;
+        int input = Convert.ToInt32(Console.ReadLine());
+        store.StoreNumber = input;
 
         Console.WriteLine("Please choose a district");
         //this is where the district list would show up (loop WriteLine of the district name property

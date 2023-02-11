@@ -5,7 +5,7 @@ public class Employee
     public string FirstName { get; set; }  
     public string LastName { get; set; }
     public string JobTitle { get; set; }
-    public string StoreNumber { get; set; }
+    public int StoreNumber { get; set; }
     public double RetailSales { get; set; }
     public string FullName => $"{FirstName} {LastName}";
     //public Employee(string firstName, string lastName, string jobTitle)
@@ -31,15 +31,12 @@ public class Employee
         employee.JobTitle = jobTitle;
 
         Console.WriteLine("Which store number would you like to add this employee too?");
-        string storeNumber = Console.ReadLine();
-        employee.StoreNumber = storeNumber;
+        string input = Console.ReadLine();
+        int numberInput = Convert.ToInt32(input);
+        employee.StoreNumber = numberInput;
         //add employee to store list
         //or to employee list i dont know which one 
         employee.RetailSales = 0;
-        Console.WriteLine(employee.FirstName);
-        Console.WriteLine(employee.LastName);
-        Console.WriteLine(employee.JobTitle);
-        Console.WriteLine(employee.FullName);
         return (employee);
     }
 
