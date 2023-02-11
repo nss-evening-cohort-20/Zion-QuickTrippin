@@ -72,7 +72,12 @@ public class MainInterface
 
             } else if (numericInput == 4)
             {
-                Console.WriteLine("Adding district");
+                Console.WriteLine($"{EmployeeList[0].RetailSales}");
+                Console.WriteLine($"{StoreList[0].GasSales}");
+                InputSales();
+                Console.WriteLine($"{EmployeeList[0].RetailSales}");
+                Console.WriteLine($"{StoreList[0].GasSales}");
+
             } else if (numericInput == 5)
             {
                 Console.WriteLine("Adding district");
@@ -101,16 +106,31 @@ public class MainInterface
 
         var FilteredEmployees = EmployeeList.Where(x => x.StoreNumber == storeNumber);
 
-
         //set gas sales
-        Console.WriteLine("What are your gas gales?");
+        Console.WriteLine("What are your gas sales?");
 
         string gasSalesInput = Console.ReadLine();
-        double gasSalesAmt = Convert.ToDouble(gasSalesInput);   
+        double gasSalesAmt = Convert.ToDouble(gasSalesInput);
 
-        
-        
+        //Assign sales to store by store index
+
+        var StoreIndex = StoreList.FindIndex(x => x.StoreNumber == storeNumber);
+        StoreList[StoreIndex].GasSales = gasSalesAmt;
+
         //Loop over each employee and set sales
-       
+
+
+        foreach (var employee in FilteredEmployees)
+        {
+            Console.WriteLine($"Retail sales for {employee.FullName}");
+
+            string retailSalesInput = Console.ReadLine();
+            double retailSalesAmt = Convert.ToDouble(retailSalesInput);
+
+            var EmployeeIndex = EmployeeList.FindIndex(x => x.FullName == employee.FullName);
+            EmployeeList[EmployeeIndex].RetailSales = retailSalesAmt;
+        }
+        _repository.RepoStores = StoreList;
+        _repository.RepoEmployees = EmployeeList;
     }
 }

@@ -6,7 +6,7 @@ public class Store
     public string DistrictName { get; set; }
     public double GasSales { get; set; }
 
-    //string StoreNumber, int DistrictNumber, int GasSales
+    //string StoreNumber, int DistrictNumber, double GasSales
     public Store CreateStore()
     {
         Store store = new Store();
